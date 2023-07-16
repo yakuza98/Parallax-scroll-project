@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+/* змінні css */
+:root {
+    --index: calc(1vw + 1vh);
+    --color-header: #fff;
+    --color-text: #cdc6c3;
+}
+/* кастомні шрифти. */
+@font-face {
+    font-family: raleway-c;
+    src: url(../fonts/raleway-regular.woff2 );
+}
+@font-face {
+    font-family: outfit-c;
+    src: url(../fonts/outfit-regular.woff2 );
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: outfit-c;
+}
+/* will-change - ті що змінюються  */
+.content, .hero, .main-header, .gallery > * {
+    will-change: transform;
+    /* тому що властивість transform змінються (devtools) */
+}
+body {
+    background-image: url(../img/bg.jpg);
+    background-size: 50px;
+    color: var(--color-text);
+    font-family: raleway-c;
+    /* забрати горизонтаьний скрол і лишити вертикальний */
+    overflow-x: hidden;
+}
+.main-header {
+    height: 100vh;
+}
+.hero {
+    width: 40%;
+    position: absolute;
+    left: 37vw;
+    top: 8vh;
+    z-index: 10;
+}
+.container {
+    padding: 0 7vw;
+}
+.main-title {
+    font-size: 160px;
+    position: absolute;
+    /* перенос на іншу строку слів, найдовшне лишається саме. а інші слова 
+    рівняються по ньому. */
+    width: min-content;
+    bottom: 1vh;
+    line-height: .9;
+}
+.main-subtitle {
+    font-size: 80px;
+    position: absolute;
+    width: min-content;
+    right: 3vw;
+    line-height: .8;
+    z-index: -2;
+    color:#244e40;
+}
+.gallery {
+    padding: 150px 0;
+    display: flex;
+}
+.gallery > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.text-block {
+    max-width: 30vw;
+    color: var(--color-text);
+    margin: 300px 0;
+}
+.gallery__item {
+    max-width: 80vw;
+    margin: 50px 0;
+    max-height: 80vh;
+    border-radius: 8px;
+}
+.text-block__h {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--color-header);
+    margin-bottom: 1.5rem;
+}
+.text-block__p {
+    line-height: 1.75;
+}
