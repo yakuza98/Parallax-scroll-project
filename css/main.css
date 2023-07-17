@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;    
+    text-decoration: none;
+    list-style: none;
 }
 /* змінні css */
 :root {
@@ -57,13 +59,12 @@ body {
     line-height: .9;
 }
 .main-subtitle {
-    font-size: 80px;
     position: absolute;
     width: min-content;
-    right: 3vw;
-    line-height: .8;
+    right: 10vw;
+    top: 1vh;
     z-index: -2;
-    color:#244e40;
+    height: 300px;
 }
 .gallery {
     padding: 150px 0;
@@ -94,4 +95,85 @@ body {
 }
 .text-block__p {
     line-height: 1.75;
+}
+.navigation__list {
+    display: flex;
+    gap: 7vh;
+    font-size: 23px;
+    margin-top: 20px;
+    font-family: outfit-c;
+    font-weight: 500;
+}
+.navigation__link {
+    color: #cdc6c3;
+    text-shadow: 0 20px 7px rgb(146 46 62);
+    transition: all 0.2s linear;
+}
+.navigation__link:hover {
+    text-shadow: 0 20px 7px rgba(0, 0, 0, .4);
+
+}
+.hero-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: outfit-c;
+}
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+}
+.logo__img {
+    height: 100px;
+
+}
+.social__blocklist {
+    display: flex;
+    gap: 35px;
+    margin: 10px;
+}
+.footer__image {
+    position: relative;
+}
+.footer__image-img {
+    height: 500px;
+    width: 100%;
+    opacity: .1;
+    border-radius: 8px;
+}
+.footer__image-block {
+    text-transform: uppercase;
+    position: absolute;
+    left: 25vw;
+    bottom: 30vh;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer__image-button {
+    text-transform: uppercase;
+    padding: 12px 50px;
+    border-radius: 15px;
+    background-color: #cdc6c3;
+    color: #010c80;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+}
+.footer__image-title {
+    padding-bottom: 20px;
+    text-shadow: 0 13px 7px rgb(146 46 62);
+}
+.footer__image-button {
+    box-shadow: 0 13px 30px rgb(146 46 62);
+    transition: all 0.2s linear;
+}
+.footer__image-button:hover {
+    box-shadow: 0 13px 30px rgb(33, 16, 19);
+    background-color: transparent;
+    color: #cdc6c3;
 }
